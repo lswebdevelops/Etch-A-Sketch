@@ -1,39 +1,63 @@
-function myFunction() {
+// Create an "div" node:
+const nodeDivCont = document.querySelector('#container');
+const nodeBodyCont = document.querySelector('#body');
 
-    // Create an "div" node:
-    const node = document.createElement("div");
-    
-    // Create a text node:
-    const textnode = document.createTextNode("Water");
-    
-    // Append the text node to the "li" node:
-    node.appendChild(textnode);
-    
-    // Append the "li" node to the list:
-    document.getElementById("container").appendChild(node);
-    }
-    let i = 0;
-   
-        function myFunction() {
-             while(i <4){
+
+// variable created for the while loops
+let i = 0;    
+// count children of parent node
+
+
+// creates the 16 x 16 grid
+function add16Divs() {
+
+    let temp = document.getElementById('container').childElementCount;
+    console.log(temp);  
+    //if container 64 x 64 was already created, remove it and create a new one.
+    if(temp === 496){
+        nodeDivCont.remove();
+        console.log('nodeDivCont removed');
+ // create a div container unter body
+ nodeBodyCont.createElement("div");
+ nodeBody.id = "container";
+
+        while(i <256){
+           
 
             // Create an "div" node:
             const node = document.createElement("div");
-            // add style to the div
-            
-            node.setAttribute('style','color: blue; background: yellow;border:solid 1px firebrick; width: 15px; height:15px');
-            // node.setAttribute('style','color: blue; background: yellow;border:solid 1px firebrick; width: 50px; height:50px');
-// 
-            // Create a text node:
-            const textnode = document.createTextNode("");
-            
-            // Append the text node to the "li" node:
-            node.appendChild(textnode);
-            
-            // Append the "li" node to the list:
+            node.className = "gridDiv";
+            nodeDivCont.className = 'container';          
             document.getElementById("container").appendChild(node);
-            i++;
-            }
-              console.log(i);
-             
+        i++;
+    }     
     }
+    else{while(i <256){
+        // Create an "div" node:
+        const node = document.createElement("div");
+        node.className = "gridDiv";
+        nodeDivCont.className = 'container';          
+        document.getElementById("container").appendChild(node);
+    i++;
+}          
+}
+                          
+}
+
+
+
+// creates the 64 x 64 grid
+function add64Divs() {
+    let temp = document.getElementById('container').childElementCount;
+    console.log(temp);   
+            while(i <496){
+                     // Create an "div" node:
+                    const node = document.createElement("div");
+                    node.className = "grid64Div";
+                    nodeDivCont.className = 'container';
+                    document.getElementById("container").appendChild(node);
+            i++;
+            }   
+           
+
+        }

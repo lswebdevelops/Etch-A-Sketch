@@ -50,6 +50,52 @@ table {
 
 /* End of reseting browser default  */
 
+body{
+    background-color: grey;
+}
+
+
 #container{
-    border: 1px solid firebrick;
+    border: 2px  solid black;
+    display: flex;
+    flex-wrap: wrap;
+    width: 512px;
+    height: 512px;
+    background-color: yellow;
+}
+.container{
+    width: 512px;
+    height: 512px;
+}
+
+/* 16 x 16  */
+.gridDiv{
+   text-align: center;
+    width:32px;
+    height: 32px;
+    background: white;
+
+    justify-content: space-around;
+
+}
+.gridDiv:hover{
+   background-color: blueviolet;
+   
+}
+
+/* 64 x 64  */
+
+
+.grid64Div{
+   text-align: center;
+    width:8px;
+    height: 8px;
+    background: white;
+
+    justify-content: space-around;
+
+}
+.grid64Div:hover{
+   background-color: blueviolet;
+   
 }
