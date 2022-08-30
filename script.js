@@ -5,9 +5,10 @@ let pixelSide = prompt("Choose a grid between 1 and 64", 32);
 
 // takes the max and minimal values to between 1 and 64:
 function handleChange() {
-    if (pixelSide < 1) pixelSide = 1;
-    if (pixelSide> 64) pixelSide= 64;
-    if(typeof(pixelSide) !== 'number')pixelSide= 32;
+   
+     if (pixelSide < 1) pixelSide = 1;
+    else if (pixelSide> 64) pixelSide= 64;
+     else if(typeof(pixelSide) !== 'number')pixelSide= 32;
   }
   handleChange()
 
