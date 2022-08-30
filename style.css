@@ -1,27 +1,44 @@
 body{
     background-color: grey;
-  
+  text-align: center;
 }
-
-
+h1{
+    color: black;
+    font-size: 3rem;
+}
+h2{
+    display: flex;
+align-items: center;
+justify-content: center;
+}
 #container{
     border: 2px  solid black;
     display: flex;
     flex-wrap: wrap;
-    width: 560px;
-    height: 560px;
-   
-   
+        
+ 
 }
 
 /* 16 x 16  */
 .gridDiv{
-   
+    
     background: white;
     border: 1px solid gray;
    
 }
 .gridDiv:hover{
    background-color: blueviolet;
+   
+}
+
+#p1{
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+}
+button{
+    width: 150px;
+    font-size: 2rem;
+    border-radius: 8px;
    
 }
