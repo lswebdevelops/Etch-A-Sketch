@@ -7,9 +7,10 @@ let pixelSide = prompt("Choose a grid between 1 and 64", 32);
 function handleChange() {
     if (pixelSide < 1) pixelSide = 1;
     if (pixelSide> 64) pixelSide= 64;
+    if(typeof(pixelSide) !== 'number')pixelSide= 32;
   }
   handleChange()
-  
+
 let gridSize = document.getElementById('gridSize');
 
 
@@ -64,3 +65,7 @@ function add16Divs() {
     }
 }
 add16Divs()
+
+
+// starts coloring
+
