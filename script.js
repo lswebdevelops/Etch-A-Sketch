@@ -1,15 +1,19 @@
 let borderPixels = 1;
 // the grid size asked to the user:
 
-let pixelSide = prompt("Choose a grid between 1 and 64", 32);
 
+ let num =prompt("Choose a grid between 1 and 64", 16);
+ let pixelSide = parseInt(num)
+// console.log(typeof(pixelSide));
 // takes the max and minimal values to between 1 and 64:
 function handleChange() {
-   
-     if (pixelSide < 1) pixelSide = 1;
+ 
+   if (pixelSide < 1) pixelSide = 1;
+
     else if (pixelSide> 64) pixelSide= 64;
-     else if(typeof(pixelSide) !== 'number')pixelSide= 32;
-  }
+    
+    }   
+
   handleChange()
 
 let gridSize = document.getElementById('gridSize');
@@ -25,12 +29,7 @@ let widthSqr =560;
 // the total  side of the square in pixels: 
 let heightSqr = widthSqr;
 let  boxPixels= -((borderPixels*2*((pixelSide^(1/2))-1)+(borderPixels*2) - widthSqr)/ (pixelSide^(1/2)))
-// console.log(borderPixels);
-// console.log(pixelSide);
-// console.log(totalPixels);
-// console.log(boxPixels);
-// console.log(widthSqr);
-// console.log(heightSqr);
+
 
 // if 16 x 16 clicked, refresh page: 
 function refreshPage(){
@@ -58,15 +57,126 @@ function add16Divs() {
         
         // Create an "div" under container:
         const node = document.createElement("div");
-        node.className = "gridDiv";    
+        node.className = "gridDiv";  
+                
         node.setAttribute('style', `width:${boxPixels}px; height:${boxPixels}px;`);         
         // div.setAttribute('style','color: blue; background: white;');
         document.getElementById("container").appendChild(node);
     i++;
     }
 }
-add16Divs()
+add16Divs();
 
 
 // starts coloring
+//how to give a div random color
 
+function generateRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+  
+  var randomColor=generateRandomColor();//"#F10531"
+  var r = () => Math.random() * 256 >> 0;
+var color = `rgb(${r()}, ${r()}, ${r()})`;
+
+
+// change color by clicking a div
+const elem = document.querySelector('.gridDiv');
+
+elem.addEventListener ('click', () => {
+    elem.style.backgroundColor = color;
+})
+
+
+//change to random color by mouse move
+function changeRandomColor(){
+    "use strict";
+   
+let squares = document.querySelectorAll('.gridDiv');
+
+/*Mouseover change to random color*/
+squares.forEach(item => item.addEventListener('mouseover', (e) => {
+    changeColor(item);
+}))
+
+const changeColor = (item) => {
+    item.style.background = "#" + Math.floor(Math.random() * 16777215).toString(16);
+}
+
+}
+
+// change color by clicking
+
+function changeRandomColorByClick(){
+    "use strict";
+    
+let squares = document.querySelectorAll('.gridDiv');
+
+/*Mouseover change to random color*/
+squares.forEach(item => item.addEventListener('click', (e) => {
+    changeColor(item);
+}))
+
+const changeColor = (item) => {
+    item.style.background = "#" + Math.floor(Math.random() * 16777215).toString(16);
+}
+
+}
+// change color by clicking to black
+
+
+function changeBlackColor(){
+    "use strict";
+    
+let squares = document.querySelectorAll('.gridDiv');
+
+//change backgroundColor to black/
+squares.forEach(item => item.addEventListener('click', (e) => {
+    changeColor(item);
+}))
+
+const changeColor = (item) => {
+    item.style.background = "black";
+}
+
+}
+//change backgroundColor to gray
+
+function changeGrayColor(){
+    "use strict";
+    
+let squares = document.querySelectorAll('.gridDiv');
+
+/*Mouseover change to random color*/
+squares.forEach(item => item.addEventListener('click', (e) => {
+    changeColor(item);
+}))
+
+const changeColor = (item) => {
+    item.style.background = "gray";
+}
+
+}
+
+//change backgroundColor to white
+function changeWhiteColor(){
+    "use strict";
+    
+let squares = document.querySelectorAll('.gridDiv');
+
+/*Mouseover change to random color*/
+squares.forEach(item => item.addEventListener('click', (e) => {
+    changeColor(item);
+}))
+
+const changeColor = (item) => {
+    item.style.background = "white";
+
+}
+
+}

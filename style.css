@@ -23,22 +23,56 @@ justify-content: center;
 .gridDiv{
     
     background: white;
-    border: 1px solid gray;
-   
+    border: 1px solid white;
+    transition: all .3s linear;
 }
-.gridDiv:hover{
+/* .gridDiv:hover{
    background-color: blueviolet;
    
-}
+} */
 
 #p1{
     font-size: larger;
     font-weight: bold;
     text-align: center;
 }
+
+/* change color by clicking on item */
+
+
+
+/* change to random color  */
+/* 
+.square {
+    background-color: #737373;
+    float: left;
+    position: relative;
+    width: 10%;
+    padding-bottom: 10%;
+    margin: 1%;
+} */
+
 button{
-    width: 150px;
+    width: Auto;
     font-size: 2rem;
+    height: 50px;
     border-radius: 8px;
-   
+   }
+#buttonRandom{
+background-color: blueviolet;
+color: pink;
+}
+
+#buttonBlack{
+    background-color: black;
+    color: white;
+}
+#buttonGray{
+     background-color: Gray;
+    color: white;
+}
+        
+#buttonWhite{
+    background-color: white;
+    color: black; 
 }
