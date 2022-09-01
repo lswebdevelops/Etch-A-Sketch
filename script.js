@@ -68,35 +68,25 @@ function add16Divs() {
 add16Divs();
 
 
-// starts coloring
-//how to give a div random color
+// remove buttons if random button is clicked: 
 
-function generateRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  }
-  
-  var randomColor=generateRandomColor();//"#F10531"
-  var r = () => Math.random() * 256 >> 0;
-var color = `rgb(${r()}, ${r()}, ${r()})`;
+const random = document.getElementById('buttonRandom');
+const black = document.getElementById('buttonBlack');
+const gray = document.getElementById('buttonGray');
+const white = document.getElementById('buttonWhite');
 
 
-// change color by clicking a div
-const elem = document.querySelector('.gridDiv');
-
-elem.addEventListener ('click', () => {
-    elem.style.backgroundColor = color;
-})
 
 
 //change to random color by mouse move
 function changeRandomColor(){
     "use strict";
-   
+random.remove();
+black.remove();  
+gray.remove();  
+white.remove();  
+
+
 let squares = document.querySelectorAll('.gridDiv');
 
 /*Mouseover change to random color*/
@@ -106,6 +96,7 @@ squares.forEach(item => item.addEventListener('mouseover', (e) => {
 
 const changeColor = (item) => {
     item.style.background = "#" + Math.floor(Math.random() * 16777215).toString(16);
+    
 }
 
 }

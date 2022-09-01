@@ -1,5 +1,5 @@
 body{
-    background-color: grey;
+    background-color: rgb(178, 175, 175);
   text-align: center;
 }
 h1{
@@ -15,6 +15,7 @@ justify-content: center;
     border: 2px  solid black;
     display: flex;
     flex-wrap: wrap;
+    border-radius: 5px;
         
  
 }
@@ -36,7 +37,16 @@ justify-content: center;
     font-weight: bold;
     text-align: center;
 }
+legend{
+    color: black;
+    font-size: 1.5rem;
+    padding: 4px;
+  
 
+}
+fieldset{
+    border-radius: 10px;
+}
 /* change color by clicking on item */
 
 

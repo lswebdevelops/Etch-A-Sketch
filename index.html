@@ -11,22 +11,26 @@
 </head>
 <body>
    <h1>Etch-A-Sketch</h1>
-  
-<button id="buttonAddGrid" type="button"  onclick="refreshPage()">Add grid</button>
-<!-- <button type="button"    onclick="changeRandomColor()">Random by Mouse Move</button> -->
+   <fieldset>
+    <legend>Add background color at clicking:</legend>
+   
+
 <button id="buttonRandom" type="button" onclick="changeRandomColorByClick()">Random</button>
 <button id="buttonBlack" type="button"  onclick="changeBlackColor()">Black</button>
 <button id="buttonGray" type="button"  onclick="changeGrayColor()">Gray</button>
 <button id="buttonWhite" type="button"  onclick="changeWhiteColor()">White</button>
 
-
-<!-- <button type="button"  onclick="refreshPage()">Reset</button> -->
-
+</fieldset>
 
    
    <p id="p1"></p>
 <h2  id="h2"></h2>
 
-   
+   <button type="button"    onclick="changeRandomColor()">Random by Mouse Move</button>
+   <button id="buttonAddGrid" type="button"  onclick="refreshPage()">Add grid</button>
+
+  
+  
+
 
 </body></html>
