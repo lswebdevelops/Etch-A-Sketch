@@ -74,18 +74,20 @@ const random = document.getElementById('buttonRandom');
 const black = document.getElementById('buttonBlack');
 const gray = document.getElementById('buttonGray');
 const white = document.getElementById('buttonWhite');
-
-
+const field = document.getElementById('field');
+const legend = document.getElementById('legend');
 
 
 //change to random color by mouse move
 function changeRandomColor(){
     "use strict";
+    // removes the elements in case "random on mouse move" is clicked
 random.remove();
 black.remove();  
 gray.remove();  
 white.remove();  
-
+field.remove();  
+legend.remove();  
 
 let squares = document.querySelectorAll('.gridDiv');
 
